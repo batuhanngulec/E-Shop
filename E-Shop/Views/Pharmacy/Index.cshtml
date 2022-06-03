@@ -1,0 +1,29 @@
+﻿@model List<EntityLayer.Entities.RecipeCreation>
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/PharmacyLayout.cshtml"; }
+
+
+<br />
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Müşteri TC</th>
+        <th>Verilen İlaç</th>
+        <th>Reçete Kodu</th>
+
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.CustomerTC</td>
+    <td>@item.AdPrescriptionProduct</td>
+    <td>@item.PrescriptionCode</td>
+
+
+
+</tr>
+}
+</table>

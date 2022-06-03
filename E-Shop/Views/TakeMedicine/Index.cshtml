@@ -1,0 +1,44 @@
+﻿@model EntityLayer.Entities.RecipeCreation
+
+@{ ViewBag.Title = "Index";
+   Layout = "~/Views/Shared/Layout.cshtml"; }
+
+
+<br />
+<br />
+<div class="form-group">
+    <label>Reçete Kodunu Yazınız</label>
+
+    <input type="text" class="form-control" width="100" name="PrescriptionCode" />
+    @Html.ValidationMessageFor(x => x.PrescriptionCode, "", new { @style = "color:red" })
+    
+    @*<a href="/TakeMedicine/Index" class="btn btn-primary" id="btn1">Ekle</a>*@
+
+    <br />
+    <br />
+
+    <button type="button" class="btn btn-primary"data-toggle="modal" data-target="#Modal1">
+        Satış Yap
+    </button>
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">İşlem Başarı ile Gerçekleşmiştir...</h2>
+                </div>
+                @*<form>
+                    <div class="modal-body">
+                        <label>
+                            Recete Adi:
+                        </label>
+                        <input type="text" name="Urun" class="form-control"/>
+                        <br />
+                        <button class="btn btn-info">Reçeteyi Ekle</button>
+                    </div>
+                </form>*@
+            </div>
+        </div>
+    </div>
+
+
+</div>

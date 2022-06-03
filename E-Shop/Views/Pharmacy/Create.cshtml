@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Entities.RecipeCreation
+@{ ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/PharmacyLayout.cshtml"; }
+
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<a href="/Pharmacy/Index" class="btn btn-primary"> Ürün Listesi</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "btn btn-danger" })
+
+                <!--<div class="form-group">
+                    <label>Müşteri TC</label>
+                    <input type="text" class="form-control" name="CustomerTC" />
+                    @Html.ValidationMessageFor(x => x.CustomerTC, "", new { @style = "color:red" })
+                </div>
+                <br />
+                <div class="form-group">
+                    <label>Verilen İlaç</label>
+                    <input type="text" class="form-control" name="AdPrescriptionProduct" />-->
+                @*@@Html.DropDownListFor(x => x.PrescriptionMedicine.Name, (List<SelectListItem>
+                    )ViewBag.recipe1, new { @class = "form-control" })@*@
+                <!--@Html.ValidationMessageFor(x => x.AdPrescriptionProduct, "", new { @style = "color:red" })
+                </div>
+                <br />
+                <div class="form-group">-->
+                @*<label>Reçete Kodu</label>
+                    <input type="text" class="form-control" name="PrescriptionCode" />*@
+                <!--@Html.ValidationMessageFor(x => x.PrescriptionCode, "", new { @style = "color:red" })
+                </div>
+                <button class="btn btn-primary" type="submit">Reçete Kodu Oluştur</button>-->
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
